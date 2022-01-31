@@ -27,16 +27,10 @@
     console.log(names3);
 
     const bikes = ['bianchi', 'miele', 'panasonic', 'miyata'];
-    const newBikes = [
-      ...bikes.slice(0, 2),
-      'benotto',
-      ...bikes.slice(2)
-    ];
+    const newBikes = [...bikes.slice(0, 2), 'benotto', ...bikes.slice(2)];
 
-    const newBikes2 = [
-      ...newBikes.slice(0, 3),
-      ...newBikes.slice(4)
-    ];
+    const newBikes2 = [...newBikes.slice(0, 3), ...newBikes.slice(4)];
+
     console.log(newBikes2);
 
     //
@@ -50,7 +44,7 @@
 
     function deleteComment(id, comments) {
       // first find the index of the item in the array
-      const commentIndex = comments.findIndex(comment => comment.id === id);
+      const commentIndex = comments.findIndex((comment) => comment.id === id);
       // make a new array without that item in it
       return [
         ...comments.slice(0, commentIndex),
@@ -59,12 +53,12 @@
       // return our new array
     }
 
-    const kaitIndex = names.findIndex(name => name === 'kait');
+    const kaitIndex = names.findIndex((name) => name === 'kait');
     const newNamesWithOutKait = [
       // get everything up to kait index
       ...names.slice(0, kaitIndex),
       // everything after Kait index
-      ...names.slice(kaitIndex + 1)
+      ...names.slice(kaitIndex + 1),
     ];
     console.log(newNamesWithOutKait);
 
@@ -86,7 +80,6 @@
     // const pizzaSlice = numbers.slice(2, 5);
     // console.log(pizzaSlice);
     // console.log(numbers);
-
   </script>
 </body>
 

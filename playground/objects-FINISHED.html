@@ -20,15 +20,15 @@
       properyToCheck: 'NEVER',
       'cool-dude': true,
       'really cool': false,
-      '777': true,
+      777: true,
       dog: 'snicker',
       clothing: {
         shirts: 10,
-        pants: 2
+        pants: 2,
       },
-      sayHello: function (greeting = 'Hey') {
-        return `${greeting} ${this.name}`;
-      }
+      sayHello(greeting = 'Hey') {
+    return `${greeting} ${this.name}`;
+  },
     };
 
     wes.job = 'Web Developer';
@@ -64,12 +64,12 @@
       last: 'bos',
       clothing: {
         shirts: 10,
-        pants: 2
-      }
+        pants: 2,
+      },
     };
     const person2 = {
       first: 'wes',
-      last: 'bos'
+      last: 'bos',
     };
 
     // const person3 = person1;
@@ -110,8 +110,6 @@
     }
 
     doStuff2(inventory);
-
-
   </script>
 </body>
 

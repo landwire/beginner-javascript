@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title></title>
+  <link rel="stylesheet" href="../../base.css">
+  <script src="./click-outside-spk.js" defer async></script>
+  <style>
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      padding: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 10px;
+      border-radius: 4px;
+    }
+
+    .card h2 {
+      color: black;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    .modal {
+      background: hsla(0, 100%, 0%, 0.8);
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      position: fixed;
+      height: 100vh;
+      width: 100vw;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s;
+    }
+
+    .modal.open {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .modal__inner {
+      background: white;
+      min-height: 400px;
+      min-width: 400px;
+      padding: 5px;
+      transform: scale(0.2);
+      opacity: 0;
+      transition: transform 0.5s;
+    }
+
+    .open > .modal__inner {
+      transform: scale(1);
+      opacity: 1;
+    }
+
+    .modal__inner h3 {
+      color: black;
+    }
+
+    .modal__inner img {
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="cards">
+    <div class="card" data-description="Wes is cool">
+      <img src="https://picsum.photos/200?random=0" alt="Wes Bos">
+      <h2>Wes Bos</h2>
+      <button>Learn more →</button>
+    </div>
+    <div class="card" data-description="Scott is neat!">
+      <img src="https://picsum.photos/200?random=1" alt="Scott Tolinski">
+      <h2>Scott Tolinski</h2>
+      <button>Learn more →</button>
+    </div>
+    <div class="card" data-description="Kait is beautiful!">
+      <img src="https://picsum.photos/200?random=2" alt="Kait Bos">
+      <h2>Kait Bos</h2>
+      <button>Learn more →</button>
+    </div>
+    <div class="card" data-description="Snickers is a dog!">
+      <img src="https://picsum.photos/200?random=3" alt="Snickers">
+      <h2>Snickers the dog</h2>
+      <button>Learn more →</button>
+    </div>
+  </div>
+
+  <div class="modal">
+    <div class="modal__inner">
+      <h3>I am the inner content!</h3>
+    </div>
+  </div>
+</body>
+
+</html>

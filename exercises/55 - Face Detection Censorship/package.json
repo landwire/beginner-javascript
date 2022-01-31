@@ -2,9 +2,9 @@
   "name": "pixelated-face",
   "version": "1.0.0",
   "description": "",
-  "main": "pixelated-face.js",
+  "main": "pixelated-face-spk.js",
   "scripts": {
-    "start": "parcel face.html"
+    "start": "parcel face-spk.html"
   },
   "author": "",
   "license": "ISC",
@@ -12,6 +12,6 @@
     "last 1 Chrome version"
   ],
   "dependencies": {
-    "parcel": "^2.0.0-alpha.2.1"
+    "parcel": "^2"
   }
 }
